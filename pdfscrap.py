@@ -40,7 +40,7 @@ def convert_pdf_to_txt(path, Detector):
     #laparams.word_margin = 0.5
     laparams.line_margin = Detector
     #rotation = 1
-    device = TextConverter(rsrcmgr, retstr, laparams=laparams)
+    device = TextConverter( rsrcmgr,retstr, codec=codec, laparams=laparams)
     fp = open(path, 'rb')
     interpreter = PDFPageInterpreter(rsrcmgr, device)
     password = ""
